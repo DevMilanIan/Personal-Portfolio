@@ -2,42 +2,123 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Personal Portfolio</title>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div class="container">
             <header>
-                <nav>
-                    <a class="navLink" href="#sectionWho"> Who is Ian </a>
-                    <a class="navLink" href="#sectionSkill"> My Skills </a>
-                    <a class="navLink" href="#sectionEducation"> My Interests </a>
-                    <a class="navLink" href="#sectionWork"> My Work </a>
+                <nav id="hamnav">
+                    <label for="hamburger">&#9776;</label>
+                    <input type="checkbox" id="hamburger"/>
+              
+                    <div id="hamitems">
+                      <a href="#whoSection">Who is Ian?</a>
+                      <a href="#workSection">Work Experience</a>
+                      <a href="#eduSection">Education</a>
+                      <a href="#projSection">Personal Projects</a>
+                    </div>
                 </nav>
-                <button class="navLink" onClick="menuFunction()">X</button>
             </header>
             <main class="container">
-                <section class="sectionContainer sectionWho">
-                <div class="whoHeader">
-                    <img
-                    class="whoImage"
-                    src="https://images.pixieset.com/45586192/1665ae0daeecd84b676a0089a7cea871-large.jpg"
-                    />
-                    <h1 class="whoTitle">Ian Milan</h1>
-                </div>
-                <p class="whoBody">
-                    Programming Instructor & Aspiring Entrepreneur who loves using
-                    technology to solve complex problems. I believe that technology over
-                    the last 10 years has grown to be immeasurably important in our
-                    lives. In order to continue building the future we need to stick to
-                    our roots, with people first and technology by our side.
-                </p>
+                <section class="sectionContainer" id="whoSection">
+                    <div class="whoHeader">
+                        <img
+                        class="whoImage"
+                        src="https://images.pixieset.com/45586192/1665ae0daeecd84b676a0089a7cea871-large.jpg"
+                        />
+                        <h1 class="whoTitle">Ian Milan</h1>
+                    </div>
+                    <p class="whoBody">
+                        Programming Instructor & Aspiring Entrepreneur who loves using
+                        technology to solve complex problems. I believe that technology over
+                        the last 10 years has grown to be immeasurably important in our
+                        lives. In order to continue building the future we need to stick to
+                        our roots, with people first and technology by our side.
+                    </p>
+                </section>
+
+                <section class="sectionContainer" id="workSection">
+                    <h1 class="workTitle">Work Experience</h1>
+                    <div class="workContainer">
+                        <img class="workImage" title="Code on Wheels Logo"
+                         src="https://images.squarespace-cdn.com/content/v1/609602c8a6b2e83d6584c469/1620493658955-9PAJ6RVLVDU74487R5SM/final-logo.png?format=1500w"
+                        />
+                        <p class="workBody">
+                            This would be a desription for one of my work experiences
+                        </p>
+                    </div>
+
+                    <div class="workContainer">
+                        <img class="workImage" title="Mavin Logo"
+                         src="https://www.mavin.cloud/shared/img/AdminConsole-logomark.svg"
+                        />
+                        <p class="workBody">
+                            This would be a desription for one of my work experiences
+                        </p>
+                    </div>
+
+                    <div class="workContainer">
+                        <img class="workImage" title="GVSU Esports Logo"
+                         src="https://gvesports.org/assets/img/icon.png"
+                        />
+                        <p class="workBody">
+                            This would be a desription for one of my work experiences
+                        </p>
+                    </div>
+
+                    <div class="workContainer">
+                        <img class="workImage" title="Natura Consulting Logo"
+                         src="http://naturaconsultingllc.com/wp-content/uploads/2016/11/Natura-Graphic.jpg"
+                        />
+                        <p class="workBody">
+                            This would be a desription for one of my work experiences
+                        </p>
+                    </div>
+                </section>
+
+                <section class="sectionContainer" id="eduSection">
+                    <h1 class="eduTitle">My Education</h1>
+                    <div class="eduContainer">
+                        <img class="eduImage" title="NVHS Logo"
+                         src=""
+                        />
+                        <p class="eduBody">
+                            This would be a desription for one of my educational endevors
+                        </p>
+                    </div>
+
+                    <div class="eduContainer">
+                        <img class="eduImage" title="GVSU Logo"
+                         src="https://www.logolynx.com/images/logolynx/fe/fe2faa7ba168d15464e8c70dffb1e834.jpeg"
+                        />
+                        <p class="eduBody">
+                            This would be a desription for one of my educational endevors
+                        </p>
+                    </div>
+                </section>
+
+                <section class="sectionContainer" id="projSection">
+                    <h1 class="projTitle">My Education</h1>
+                    <div class="projContainer">
+                        <img class="projImage" title="Remembify Logo"
+                         src="./images/remembify.png"
+                        />
+                        <p class="projBody">
+                            This would be a desription for one of my personal projects
+                        </p>
+                    </div>
+
+                    <div class="projContainer">
+                        <img class="projImage" title="Secret Santa Logo"
+                         src=""
+                        />
+                        <p class="projBody">
+                            This would be a desription for one of my personal projects
+                        </p>
+                    </div>
                 </section>
             </main>
         </div>

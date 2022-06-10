@@ -16,7 +16,7 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* HEADER */
@@ -32,41 +32,13 @@ header {
   background-color: crimson;
 }
 
-nav {
-  display: none; /* fix me */
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  padding: 2vh 5vw;
-}
+/***** MAIN / BODY *****/
 
-.navLink {
-  background-color: crimson;
-  color: white;
-  border: 0;
-  margin: 2vh;
-}
-
-.navLink:hover {
-  color: red;
-  cursor: pointer;
-}
-
-/* MAIN / BODY */
-
-.sectionContainer {
-  padding: 3vh 5vw;
-}
-
-.headerSection {
-  color: crimson;
-  font-size: 24px;
-  text-align: center;
-}
+.sectionContainer { padding: 3vh 5vw; }
 
 /* Who is section */
 
-.sectionWho {
+#whoSection {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -75,6 +47,12 @@ nav {
   padding: 15vh 0 10vh 0;
   min-height: 50vh;
   max-height: 80vh;
+}
+
+.whoHeader {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
 .whoTitle {
@@ -96,8 +74,166 @@ nav {
   text-align: center;
 }
 
-.whoHeader {
+/* Work experience section */
+
+#workSection {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
   align-items: center;
+  padding: 15vh 0 10vh 0;
+  min-height: 50vh;
+  max-height: 80vh;
+}
+
+.workContainer {
+  align-items: center;
+  align-content: center;
+}
+
+.workTitle {
+  font-weight: 900;
+  align-self: center;
+}
+
+.workImage {
+  float: left;
+  margin:  0 2em 2em 0;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  object-fit: contain;
+  box-shadow: 0px 2px 15px 3px lightBlue;
+}
+
+.workBody {
+  max-width: 30em;
+  text-align: center;
+}
+
+/* Education section */
+
+#eduSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  padding: 15vh 0 10vh 0;
+  min-height: 50vh;
+  max-height: 80vh;
+}
+
+.eduContainer {
+  align-items: center;
+  align-content: center;
+}
+
+.eduTitle {
+  font-weight: 900;
+  align-self: center;
+}
+
+.eduImage {
+  float: left;
+  margin:  0 2em 2em 0;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  object-fit: contain;
+  box-shadow: 0px 2px 15px 3px lightBlue;
+}
+
+.eduBody {
+  max-width: 30em;
+  text-align: center;
+}
+
+/* Projects section */
+
+#projSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  padding: 15vh 0 10vh 0;
+  min-height: 50vh;
+  max-height: 80vh;
+}
+
+.projContainer {
+  align-items: center;
+  align-content: center;
+}
+
+.projTitle {
+  font-weight: 900;
+  align-self: center;
+}
+
+.projImage {
+  float: left;
+  margin:  0 2em 2em 0;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  object-fit: contain;
+  box-shadow: 0px 2px 15px 3px lightBlue;
+}
+
+.projBody {
+  max-width: 30em;
+  text-align: center;
+}
+
+/******** HAMBURGER MENU *******/
+
+/*** BIG SCREENS ***/
+#hamnav {
+  width: 100%;
+  background: crimson;
+  /* Optional */
+  position: sticky;
+  top: 0;
+}
+
+#hamitems { display: flex; }
+#hamitems a {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 10px 10px 0 10px;
+  color: white;
+  font-family: "Baloo Tammudu 2", cursive;
+  text-decoration: none;
+  text-align: center;
+}
+#hamitems a:hover { background: #000; }
+#hamnav label, #hamburger { display: none; }
+
+/*** [ON SMALL SCREENS] ***/
+@media screen and (max-width: 768px){
+  /* (A) BREAK INTO VERTICAL MENU */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid crimson;
+    background-color: #000;
+  }
+
+  /* (B) SHOW HAMBURGER ICON */
+  #hamnav label {
+    display: inline-block;
+    color: white;
+    background: crimson;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* (C) TOGGLE SHOW/HIDE MENU */
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
 }
