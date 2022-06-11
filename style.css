@@ -28,8 +28,8 @@ header {
   align-items: flex-end;
   width: 100%;
   position: fixed;
-
   background-color: crimson;
+  z-index: 3;
 }
 
 /***** MAIN / BODY *****/
@@ -48,6 +48,7 @@ header {
 }
 
 .workContainer, .eduContainer, .projContainer {
+  justify-content: space-evenly;
   align-items: center;
   align-content: center;
 }
@@ -70,6 +71,7 @@ header {
   width: 5em;
   height: 5em;
   object-fit: contain;
+  margin-top: 10px;
   box-shadow: 0px 2px 15px 3px lightBlue;
 }
 
@@ -90,9 +92,7 @@ header {
   box-shadow: 0px 2px 15px 3px lightBlue;
 }
 
-/******** HAMBURGER MENU *******/
-
-/*** [Large Screens] ***/
+/*** Ham Nav [Large Screens] ***/
 #hamnav {
   width: 100%;
   background: crimson;
@@ -113,8 +113,25 @@ header {
 #hamitems a:hover { background: #000; }
 #hamnav label, #hamburger { display: none; }
 
-/*** [Small Screens] ***/
+/*** Ham Nav + Mobile Adjustments [Small Screens] ***/
 @media screen and (max-width: 768px){
+  /*Verticle Content*/
+  .workImage, .eduImage, .projImage {
+    float: none;
+    position: relative;
+    left: 40%;
+  }
+  .whoBody, .workBody, .eduBody, .projBody {
+    float: none;
+    margin: 0;
+  }
+
+  .whoHeader, 
+  .workContainer, .eduContainer, .projContainer,
+  .workImage, .eduImage, .projImage {
+    margin-bottom: 10px;
+  }
+
   /* Verticle Menu */
   #hamitems a {
     box-sizing: border-box;
