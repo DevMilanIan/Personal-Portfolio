@@ -44,7 +44,7 @@ header {
   padding: 15vh 0 10vh 0;
   min-height: 50vh;
 }
-  #projSection {
+  .sectionContainer:last-child {
     margin-bottom: 250px;
   }
 
@@ -88,9 +88,9 @@ header {
   .sectionContainer {
       padding-top: 10vh;
   }
-      #projSection {
-      margin-bottom: 0;
-      }
+    .sectionContainer:last-child {
+      margin: 0px;
+    }
 
   .sectionImage {
       float: none;
