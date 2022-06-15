@@ -1,0 +1,46 @@
+/*** Ham Nav [Large Screens] ***/
+#hamnav {
+    width: 100%;
+    background: crimson;
+    position: sticky;
+    top: 0;
+}
+  
+#hamitems { display: flex; }
+#hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 10px 10px 0 10px;
+    color: white;
+    font-family: "Baloo Tammudu 2", cursive;
+    text-decoration: none;
+text-align: center;
+}
+#hamitems a:hover { background: #000; }
+#hamnav label, #hamburger { display: none; }
+
+/*** Ham Nav [Small Screens] ***/
+@media screen and (max-width: 768px) {
+    /* Verticle Menu */
+    #hamitems a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid crimson;
+        background-color: #000;
+    }
+
+    /* Hamburger icon */
+    #hamnav label {
+        display: inline-block;
+        color: white;
+        background: crimson;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    /* Toggle show/hide */
+    #hamitems { display: none; }
+    #hamnav input:checked ~ #hamitems { display: block; }
+}
