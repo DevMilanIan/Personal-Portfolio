@@ -83,7 +83,7 @@ header {
   }
 
 /*** Mobile - Vertical Content ***/
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 854px) {
   
   .sectionContainer {
       padding-top: 10vh;
